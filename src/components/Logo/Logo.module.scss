@@ -1,0 +1,14 @@
+.logo {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  height: 100%; 
+
+  &--iconed {
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
