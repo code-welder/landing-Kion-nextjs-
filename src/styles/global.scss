@@ -1,0 +1,27 @@
+@import './reset';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  // COLORS
+  --color-black: #283337;
+  --color-typography-black: #40494D;
+  // FONTS
+  --font-primary: 'Roboto Condensed', sans-serif;
+}
+
+#__next {
+  min-height: 100vh;
+  font-family: var(--font-primary);
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
