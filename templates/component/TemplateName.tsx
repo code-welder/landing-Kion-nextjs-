@@ -2,7 +2,7 @@ import styles from './TemplateName.module.scss';
 
 interface TemplateNameProps {}
 
-function TemaplateName(props: TemplateNameProps) {
+function TemplateName(props: TemplateNameProps) {
   return (
     <div className={styles.wrapper}>
       
@@ -10,4 +10,4 @@ function TemaplateName(props: TemplateNameProps) {
   );
 };
 
-export default TemaplateName;
+export default TemplateName;
