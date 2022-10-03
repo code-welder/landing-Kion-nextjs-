@@ -1,0 +1,12 @@
+.list {
+  color: var(--color-typography-black);
+
+  &__item {
+    transition: color .2s;
+    padding: 4px 8px;
+
+    &:hover {
+      color: var(--color-green);
+    }
+  }
+}
