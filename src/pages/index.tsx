@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
 import Header from '@components/Header';
+import SectionHero from '@components/SectionHero';
+import SectionPartners from '@components/SectionPartners';
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +19,11 @@ const Home: NextPage = () => {
         />
       </Head>
       <Header />
+
+      <main>
+        <SectionHero />
+        <SectionPartners />
+      </main>
     </>
   );
 };

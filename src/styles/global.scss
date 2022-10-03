@@ -1,5 +1,6 @@
 @import './reset';
 @import './variables';
+@import './mixins';
 
 *,
 *::before,
@@ -17,4 +18,21 @@
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+
+.section-title {
+  font: 400 60px/1.2 var(--font-secondary);
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  @include media-tablet {
+    font-size: 42px;
+  }
+
+  @include media-mobile {
+    font-size: 32px;
+  }
 }

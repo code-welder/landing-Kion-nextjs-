@@ -1,3 +1,5 @@
+@import 'styles/mixins';
+
 .wrapper {
   cursor: pointer;
   display: inline-flex;
@@ -29,10 +31,20 @@
   padding: 12px 24px;
   font-size: 18px;
   min-height: 52px;
+
+  @include media-mobile {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
 }
 
 .lg {
   padding: 16px 42px;
   font-size: 22px;
   min-height: 56px;
+
+  @include media-mobile {
+    font-size: 18px;
+    padding: 12px 32px;
+  }
 }

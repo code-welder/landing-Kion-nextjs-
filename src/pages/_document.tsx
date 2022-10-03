@@ -13,7 +13,7 @@ function Document() {
           href="https://fonts.googleapis.com"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </Head>
