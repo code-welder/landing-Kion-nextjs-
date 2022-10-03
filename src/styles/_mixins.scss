@@ -1,5 +1,19 @@
+// Media mixins (equal mediaQueries from `./src/constants`)
+
 @mixin media-mobile {
   @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+} ;
+
+@mixin media-only-tablet {
+  @media (min-width: 601px) and (max-width: 1024px) {
     @content;
   }
 } ;
