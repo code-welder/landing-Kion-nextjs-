@@ -1,0 +1,38 @@
+.wrapper {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 1;
+  transition: background 0.2s, color 0.2s;
+}
+
+// Variants
+
+.primary {
+  background-color: var(--color-black);
+  border-radius: 56px;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-green);
+    color: var(--color-black);
+  }
+}
+
+// Sizes
+
+.sm {
+  padding: 12px 24px;
+  font-size: 18px;
+  min-height: 52px;
+}
+
+.lg {
+  padding: 16px 42px;
+  font-size: 22px;
+  min-height: 56px;
+}
