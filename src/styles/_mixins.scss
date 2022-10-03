@@ -10,10 +10,10 @@
   @media (max-width: 1024px) {
     @content;
   }
-} ;
+}
 
 @mixin media-only-tablet {
   @media (min-width: 601px) and (max-width: 1024px) {
     @content;
   }
-} ;
+}
