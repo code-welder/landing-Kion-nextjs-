@@ -1,0 +1,23 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  transition: background 0.2s, border 0.2s;
+
+  &:hover {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+
+    .icon {
+      fill: var(--color-white);
+    }
+  }
+}
+
+.icon {
+  fill: var(--color-black);
+  transition: fill 0.2s;
+}
