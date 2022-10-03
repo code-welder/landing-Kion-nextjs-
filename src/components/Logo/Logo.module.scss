@@ -1,4 +1,4 @@
-.logo {
+.wrapper {
   display: inline-flex;
   gap: 10px;
   align-items: center;
@@ -11,4 +11,12 @@
       height: 100%;
     }
   }
+}
+
+.icon {
+  fill: var(--color-green);
+}
+
+.text {
+  fill: var(--color-black)
 }
