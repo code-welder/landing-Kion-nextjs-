@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import styles from './SectionHero.module.scss';
+import styles from './Hero.module.scss';
 import Button from '@components/Button';
 
 import MainImage from '@images/hero-section/main.png';
@@ -8,7 +8,7 @@ import StatImage1 from '@images/hero-section/stat-1.png';
 import StatImage2 from '@images/hero-section/stat-2.png';
 import StatImage3 from '@images/hero-section/stat-3.png';
 
-function SectionHero() {
+function Hero() {
   return (
     <section className={styles.wrapper}>
       <div className={clsx(styles.inner, 'container')}>
@@ -65,4 +65,4 @@ function SectionHero() {
   );
 }
 
-export default SectionHero;
+export default Hero;

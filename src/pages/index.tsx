@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
 import Header from '@components/Header';
-import SectionHero from '@components/SectionHero';
-import SectionPartners from '@components/SectionPartners';
+import Hero from '@components/sections/Hero';
+import Partners from '@components/sections/Partners';
+import Product from '@components/sections/Product';
 
 const Home: NextPage = () => {
   return (
@@ -21,8 +22,9 @@ const Home: NextPage = () => {
       <Header />
 
       <main>
-        <SectionHero />
-        <SectionPartners />
+        <Hero />
+        <Partners />
+        <Product />
       </main>
     </>
   );

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './SectionPartners.module.scss';
+import styles from './Partners.module.scss';
 
 import Nasa from '@images/partners/nasa.png';
 import Absolute from '@images/partners/absolute.png';
@@ -30,7 +30,7 @@ const partnersList = [
   },
 ];
 
-function SectionPartners() {
+function Partners() {
   return (
     <section className={styles.wrapper}>
       <div className="container">
@@ -52,4 +52,4 @@ function SectionPartners() {
   );
 }
 
-export default SectionPartners;
+export default Partners;
