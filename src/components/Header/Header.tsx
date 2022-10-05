@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
 import styles from './Header.module.scss';
@@ -15,7 +15,7 @@ import SearchButton from '@components/SearchButton';
 const links: NavigationLink[] = [
   {
     title: 'Product',
-    href: '',
+    href: '#product',
   },
   {
     title: 'Resources',
@@ -34,12 +34,31 @@ const links: NavigationLink[] = [
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [headerOnScroll, setHeaderOnScroll] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
 
   const openMenu = () => setShowMenu(true);
   const closeMenu = () => setShowMenu(false);
 
   const openSearch = () => setShowSearch(true);
   const closeSearch = () => setShowSearch(false);
+
+  useEffect(() => {
+    const headerHeight = headerRef.current?.offsetHeight;
+    document.body.style.paddingTop = headerHeight + 'px';
+
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setHeaderOnScroll(true);
+      } else {
+        setHeaderOnScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, true);
+
+    return () => window.removeEventListener('scroll', handleScroll, true);
+  }, []);
 
   useEffect(() => {
     const handleKeydown = (e: KeyboardEvent) => {
@@ -53,8 +72,21 @@ function Header() {
     return () => window.removeEventListener('keydown', handleKeydown);
   }, [showSearch]);
 
+  useEffect(() => {
+    if (showMenu || showSearch) {
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.body.style.overflow = 'visible';
+    };
+  }, [showMenu, showSearch]);
+
   return (
-    <header className={styles.wrapper}>
+    <header
+      className={clsx(styles.wrapper, headerOnScroll && styles.onscroll)}
+      ref={headerRef}
+    >
       <div className={clsx(styles.inner, 'container')}>
         <Link
           href="/"
@@ -92,6 +124,7 @@ function Header() {
             links={links}
             wrapperClass={styles.nav}
             listClass={styles.nav__list}
+            onLinkClick={closeMenu}
           />
 
           <SearchButton
