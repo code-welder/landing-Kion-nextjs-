@@ -20,7 +20,6 @@
   margin: 0 auto;
 }
 
-
 .section-title {
   font: 400 60px/1.2 var(--font-secondary);
 
@@ -34,5 +33,31 @@
 
   @include media-mobile {
     font-size: 32px;
+  }
+}
+
+.learn-more {
+  font-weight: 700;
+  font-size: 18px;
+
+  &--h-green {
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-green);
+    }
+  }
+
+  @include media-mobile {
+    font-size: 16px;
+  }
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }

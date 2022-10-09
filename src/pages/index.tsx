@@ -5,6 +5,7 @@ import Hero from '@components/sections/Hero';
 import Partners from '@components/sections/Partners';
 import Product from '@components/sections/Product';
 import Results from '@components/sections/Results';
+import About from '@components/sections/About';
 
 const Home: NextPage = () => {
   return (
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
         <Partners />
         <Product />
         <Results />
+        <About />
       </main>
     </>
   );

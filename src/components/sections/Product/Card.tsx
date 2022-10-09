@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import styles from './Product.module.scss';
@@ -27,7 +28,9 @@ function Card({ img, title, description, link }: CardProps) {
 
           <h3 className={styles.card__title}>{title}</h3>
           <p className={styles.card__description}>{description}</p>
-          <div className={styles.card__learnMore}>Learn More</div>
+          <div className={clsx(styles.card__learnMore, 'learn-more')}>
+            Learn More
+          </div>
         </a>
       </Link>
     </li>
