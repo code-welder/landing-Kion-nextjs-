@@ -16,6 +16,19 @@
         "component": "templates/component/TemplateName.tsx",
         "style": "templates/component/TemplateName.module.scss"
       }
+    },
+    "section": {
+      "path": "src/components/sections",
+      "withStyle": true,
+      "withTest": false,
+      "withStory": false,
+      "withLazy": false,
+      "withIndex": true,
+      "customTemplates": {
+        "index": "templates/section/index.ts",
+        "component": "templates/section/TemplateName.tsx",
+        "style": "templates/section/TemplateName.module.scss"
+      }
     }
   }
 }
