@@ -1,16 +1,35 @@
+@import 'styles/mixins';
+
 .wrapper {
   padding: 150px 0 75px;
+
+  @include media-tablet {
+    padding: 90px 0 35px;
+  }
 }
 
 .inner {
   display: flex;
   align-items: center;
   gap: 20px;
+
+  @include media-mobile {
+    flex-direction: column;
+  }
 }
 
 .text {
   flex-basis: 50%;
   padding-right: 200px;
+
+  @include media-tablet {
+    padding-right: 80px;
+  }
+
+  @include media-mobile {
+    padding-right: 0;
+    margin-bottom: 35px;
+  }
 }
 
 .description,
