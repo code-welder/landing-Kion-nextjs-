@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
 import styles from './Header.module.scss';
@@ -11,6 +11,7 @@ import Search from '@components/Search';
 import CloseIcon from '@icons/close.svg';
 import HamburgerIcon from '@icons/hamburger.svg';
 import SearchButton from '@components/SearchButton';
+import { useBodyOverflowStyle, useKeyPress } from 'hooks';
 
 const links: NavigationLink[] = [
   {
@@ -35,7 +36,7 @@ function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [headerOnScroll, setHeaderOnScroll] = useState(false);
-  const headerRef = useRef<HTMLElement | null>(null);
+  const setBodyOverflow = useBodyOverflowStyle();
 
   const openMenu = () => setShowMenu(true);
   const closeMenu = () => setShowMenu(false);
@@ -43,10 +44,9 @@ function Header() {
   const openSearch = () => setShowSearch(true);
   const closeSearch = () => setShowSearch(false);
 
-  useEffect(() => {
-    const headerHeight = headerRef.current?.offsetHeight;
-    document.body.style.paddingTop = headerHeight + 'px';
+  useKeyPress('Escape', closeSearch);
 
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
         setHeaderOnScroll(true);
@@ -61,32 +61,14 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    const handleKeydown = (e: KeyboardEvent) => {
-      if (e.code === 'Escape') {
-        closeSearch();
-      }
-    };
+    if (showMenu || showSearch) setBodyOverflow('hidden');
 
-    if (showSearch) window.addEventListener('keydown', handleKeydown);
-
-    return () => window.removeEventListener('keydown', handleKeydown);
-  }, [showSearch]);
-
-  useEffect(() => {
-    if (showMenu || showSearch) {
-      document.body.style.overflow = 'hidden';
-    }
-
-    return () => {
-      document.body.style.overflow = 'visible';
-    };
+    return () => setBodyOverflow('visible');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showMenu, showSearch]);
 
   return (
-    <header
-      className={clsx(styles.wrapper, headerOnScroll && styles.onscroll)}
-      ref={headerRef}
-    >
+    <header className={clsx(styles.wrapper, headerOnScroll && styles.onscroll)}>
       <div className={clsx(styles.inner, 'container')}>
         <Link
           href="/"
