@@ -20,15 +20,15 @@ const links: NavigationLink[] = [
   },
   {
     title: 'Resources',
-    href: '',
+    href: '#',
   },
   {
     title: 'Support',
-    href: '',
+    href: '#',
   },
   {
     title: 'About',
-    href: '',
+    href: '#about',
   },
 ];
 
