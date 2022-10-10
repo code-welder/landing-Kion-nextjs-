@@ -1,0 +1,28 @@
+@import 'styles/mixins';
+
+.wrapper {
+  padding: 75px 0;
+  text-align: center;
+
+  @include media-mobile {
+    padding: 45px 0;
+  }
+}
+
+.list {
+  margin-top: 90px;
+  display: flex;
+  gap: 250px;
+  align-items: center;
+  justify-content: center;
+
+  @include media-tablet {
+    gap: 150px;
+  }
+
+  @include media-mobile {
+    margin-top: 45px;
+    flex-direction: column;
+    gap: 40px;
+  }
+}

@@ -6,6 +6,8 @@ import Partners from '@components/sections/Partners';
 import Product from '@components/sections/Product';
 import Results from '@components/sections/Results';
 import About from '@components/sections/About';
+import BuildFor from '@components/sections/BuildFor';
+import CallToAction from '@components/sections/CallToAction';
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +31,8 @@ const Home: NextPage = () => {
         <Product />
         <Results />
         <About />
+        <BuildFor />
+        <CallToAction />
       </main>
     </>
   );
