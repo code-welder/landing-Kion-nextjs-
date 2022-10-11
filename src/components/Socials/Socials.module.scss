@@ -1,0 +1,24 @@
+@import 'styles/mixins';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.link {
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    svg {
+      fill: var(--color-green);
+    }
+  }
+
+  svg {
+    fill: var(--color-gray);
+    transition: fill .2s;
+  }
+}
