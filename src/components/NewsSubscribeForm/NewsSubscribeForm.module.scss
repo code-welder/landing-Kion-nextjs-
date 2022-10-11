@@ -1,0 +1,35 @@
+@import 'styles/mixins';
+
+.wrapper {
+  width: 100%;
+}
+
+.title {
+  color: var(--color-white);
+  font-size: 22px;
+  margin-bottom: 32px;
+  font-weight: 400;
+
+  @include media-mobile {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  font-size: 18px;
+
+  @include media-mobile {
+    font-size: 16px;
+  }
+}
