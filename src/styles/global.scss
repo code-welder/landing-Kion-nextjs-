@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: auto;
+  scroll-padding-top: 20px;
+}
+
 body {
   padding-top: 132px;
 
