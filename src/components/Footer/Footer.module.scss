@@ -1,0 +1,160 @@
+@import 'styles/mixins';
+
+.wrapper {
+  padding: 100px 0 35px;
+  background-color: #101c21;
+
+  @include media-mobile {
+    padding: 50px 0 20px;
+  }
+}
+
+.link {
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-green);
+  }
+
+  @include media-mobile {
+    font-size: 14px;
+  }
+}
+
+.top {
+  margin-bottom: 100px;
+  display: flex;
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include media-mobile {
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+
+    &__right {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.socials,
+.top__left {
+  width: 46%;
+
+  @include media-tablet {
+    width: 30%;
+  }
+
+  @include media-mobile {
+    width: 100%;
+  }
+}
+
+.top__right {
+  width: 54%;
+
+  @include media-tablet {
+    width: 70%;
+  }
+
+  @include media-mobile {
+    width: 100%;
+  }
+}
+
+.sideLinks,
+.form {
+  width: calc(100% - 160px);
+
+  @include media-tablet {
+    width: 100%;
+  }
+}
+
+.form {
+  @include media-mobile {
+    order: 3;
+  }
+}
+
+.sideLinks {
+  margin-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--color-white);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  @include media-tablet {
+    margin-right: 0;
+  }
+
+  @include media-mobile {
+    order: 2;
+    margin: 40px 0;
+  }
+}
+
+.logo {
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  @include media-mobile {
+    order: 1;
+  }
+}
+
+.products {
+  color: var(--color-gray-light);
+  margin-bottom: 50px;
+
+  &__item {
+    margin-bottom: 12px;
+
+    &:nth-child(4) {
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: var(--color-gray-dark);
+
+  @include media-mobile {
+    font-size: 16px;
+  }
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  color: var(--color-gray);
+
+  @include media-mobile {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+}
+
+.copyrightsLinks {
+  display: flex;
+  gap: 30px;
+  margin-right: auto;
+}
