@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import styles from './Hero.module.scss';
-import Button from '@components/Button';
+import Button from '@components/shared/Button';
 
 import MainImage from '@images/hero-section/main.png';
 import StatImage1 from '@images/hero-section/stat-1.png';

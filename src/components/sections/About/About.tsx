@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './About.module.scss';
 
-import Modal from '@components/Modal';
+import Modal from '@components/shared/Modal';
 import PlayIcon from '@icons/play.svg';
 import PlaceholderImage from '@images/placeholder.jpg';
 

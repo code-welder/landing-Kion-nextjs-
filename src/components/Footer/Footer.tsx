@@ -1,7 +1,7 @@
-import Button from '@components/Button';
-import Logo from '@components/Logo';
-import NewsSubscribeForm from '@components/NewsSubscribeForm';
-import Socials from '@components/Socials';
+import Button from '@components/shared/Button';
+import Logo from '@components/shared/Logo';
+import NewsSubscribeForm from '@components/Footer/components/NewsSubscribeForm';
+import Socials from '@components/Footer/components/Socials';
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 

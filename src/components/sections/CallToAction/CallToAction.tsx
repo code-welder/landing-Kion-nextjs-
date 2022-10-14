@@ -1,4 +1,4 @@
-import Button from '@components/Button';
+import Button from '@components/shared/Button';
 import clsx from 'clsx';
 import styles from './CallToAction.module.scss';
 

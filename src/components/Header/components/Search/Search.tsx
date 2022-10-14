@@ -1,6 +1,6 @@
 import styles from './Search.module.scss';
 import { useRef } from 'react';
-import SearchButton from '@components/SearchButton';
+import SearchButton from '@components/Header/components/SearchButton';
 
 interface SearchProps {
   onSubmit?: React.FormEventHandler;

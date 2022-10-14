@@ -1,9 +1,9 @@
-import Button from '@components/Button';
+import Button from '@components/shared/Button';
 import clsx from 'clsx';
 import styles from './Product.module.scss';
 
 import AutomationImage from '@images/products/ao.png';
-import Card, { CardProps } from './Card';
+import Card, { CardProps } from './components/ProductCard/ProductCard';
 
 const productsList: CardProps[] = [
   {

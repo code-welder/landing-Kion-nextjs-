@@ -3,14 +3,16 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import styles from './Header.module.scss';
 
-import Button from '@components/Button';
-import Logo from '@components/Logo';
-import Navigation, { NavigationLink } from '@components/Navigation';
-import Search from '@components/Search';
+import Button from '@components/shared/Button';
+import Logo from '@components/shared/Logo';
+import Navigation, {
+  NavigationLink,
+} from '@components/Header/components/Navigation';
+import Search from '@components/Header/components/Search';
 
 import CloseIcon from '@icons/close.svg';
 import HamburgerIcon from '@icons/hamburger.svg';
-import SearchButton from '@components/SearchButton';
+import SearchButton from '@components/Header/components/SearchButton';
 import { useBodyOverflowStyle, useKeyPress } from 'hooks';
 
 const links: NavigationLink[] = [
