@@ -32,7 +32,7 @@ const Home: NextPage<PageProps> = ({ year }) => {
       </Head>
       <Header />
 
-      <main>
+      <main id="main">
         <Hero />
         <Partners />
         <Product />

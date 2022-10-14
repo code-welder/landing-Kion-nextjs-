@@ -97,6 +97,12 @@ function Header() {
           className={clsx(styles.menu, showMenu && styles.open)}
           id="header-menu"
         >
+          <a
+            href="#main"
+            className="a11y"
+          >
+            Skip to main content
+          </a>
           <button
             className={styles.menu__close}
             onClick={closeMenu}
