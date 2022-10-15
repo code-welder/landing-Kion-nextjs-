@@ -157,7 +157,10 @@ function Footer({ year }: FooterProps) {
               href="/"
               passHref
             >
-              <a className={styles.logo}>
+              <a
+                className={styles.logo}
+                title="Home page"
+              >
                 <Logo />
               </a>
             </Link>
